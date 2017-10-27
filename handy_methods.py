@@ -29,7 +29,7 @@ def compare_dates(utc_date, local_date):
         log_test_output('tag value diff in FIX: ' + fix_date_time + ' <---> value in GWML: ' + gwml_date_time)
         return 'failed'
 
-    # fo do a count on the letter in a string
+    # to do a count on the letter in a string
     def find_duplicates(string):
     search_result = {}
     test_list = list(string)
