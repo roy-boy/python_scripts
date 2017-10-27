@@ -45,3 +45,14 @@ def find_duplicates(string):
             # print(count)
         search_result[letter] = count
     return search_result
+
+# count the dup letter in a string
+def letter_count(test_string):
+    string_list = list(test_string)
+    letter_dict = {}
+    for letter in string_list:
+        try:
+            letter_dict[letter] += 1
+        except KeyError:
+            letter_dict[letter] = 1
+    return letter_dict
