@@ -2,7 +2,7 @@
 """readeXML_diff.py compares two xml files with the option to ignore certain tags"""
 import xml.etree.ElementTree as ET
 import logging
-from testProperty import NAME_SPACE, TEST_OUTPUT_PATH
+from testProperty import NAME_SPACE, TEST_OUTPUT_PATH, RT_NAME_SPACE
 
 
 class XMLTree:
@@ -39,19 +39,23 @@ class XMLTree:
             tree = ET.parse(xml_file)
             xml_root = tree.getroot()
         except IOError as err:
-            print('Failed to open the file as ', err)
+            print('Failed to open the file as ', str(err))
         return xml_root
 
-    def xml_compare(self, xml_tree_a, xml_tree_b, excludes=[]):
+    def xml_compare(self, xml_tree_a, xml_tree_b, fpml_file, excludes=[]):
         """ compare two xml trees for syntax and value of each node which is not in the exclude list"""
         ns_excludes = []
+        if '_rt_' in str(fpml_file):
+            fpml_name_space = RT_NAME_SPACE
+        else:
+            fpml_name_space = NAME_SPACE
         for tags in excludes:
-            name_space_tags = NAME_SPACE + tags
+            name_space_tags = fpml_name_space + tags
             ns_excludes.append(name_space_tags)
         # if xml_tree_a.tag not in ns_excludes and xml_tree_b.tag not in ns_excludes:
         if xml_tree_a.tag != xml_tree_b.tag:
-            self.logger.debug('Tags do not match: %s and %s' % (str(xml_tree_a.tag).replace(NAME_SPACE, ''),
-                                                                str(xml_tree_b.tag).replace(NAME_SPACE, '')))
+            self.logger.debug('Tags do not match: %s and %s' % (str(xml_tree_a.tag).replace(fpml_name_space, ''),
+                                                                str(xml_tree_b.tag).replace(fpml_name_space, '')))
             return False
         for name, value in xml_tree_a.attrib.items():
             if name not in ns_excludes:
@@ -67,7 +71,7 @@ class XMLTree:
                     return False
         if not self.text_compare(xml_tree_a.text, xml_tree_b.text):
             self.logger.debug('FPML node: %r text not match, %r != %r'
-                              % (str(xml_tree_a.tag).replace(NAME_SPACE, ''), xml_tree_a.text, xml_tree_b.text))
+                              % (str(xml_tree_a.tag).replace(fpml_name_space, ''), xml_tree_a.text, xml_tree_b.text))
             return False
         if not self.text_compare(xml_tree_a.tail, xml_tree_b.tail):
             self.logger.debug('tail: %r != %r' % (xml_tree_a.tail, xml_tree_b.tail))
@@ -75,7 +79,7 @@ class XMLTree:
         tree_list_1 = list(xml_tree_a)
         tree_list_2 = list(xml_tree_b)
         diff_result = True
-        if len(tree_list_1) > 0 and len(tree_list_2) > 0:
+        if tree_list_1 and tree_list_2:
             i = 0
             j = 0
             for child_node_a, child_node_b in zip(tree_list_1, tree_list_2):
@@ -90,12 +94,13 @@ class XMLTree:
                         child_node_b_next = tree_list_2[j]
                         child_node_b = child_node_b_next
                 else:
-                    child_node_a = tree_list_1[i]
-                    child_node_b = tree_list_2[j]
-                    i += 1
-                    j += 1
+                    if j < len(tree_list_2) and i < len(tree_list_1):
+                        child_node_a = tree_list_1[i]
+                        child_node_b = tree_list_2[j]
+                        i += 1
+                        j += 1
                 if child_node_a.tag not in ns_excludes and child_node_b.tag not in ns_excludes:
-                    if not self.xml_compare(child_node_a, child_node_b, excludes):
+                    if not self.xml_compare(child_node_a, child_node_b, fpml_file, excludes):
                         diff_result = False
         return diff_result
 
