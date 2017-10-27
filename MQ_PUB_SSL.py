@@ -25,8 +25,8 @@ def put_xml_to_mq_ssl(input_xml_file, q_name):
         put_queue.close()
         qmgr.disconnect()
         return True
-    except Exception as exp:
-        tl.test_logger.debug('Failed to put the xml to MQ via SSL: ', exp)
+    except Exception:
+        tl.test_logger.debug('Failed to put the xml to MQ via SSL')
         put_queue.close()
         qmgr.disconnect()
         return False
