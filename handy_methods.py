@@ -1,3 +1,11 @@
+# List Comprehension
+item = [n*2 for n in range(10)]
+print item
+
+#Dict Comprehension
+item = {n: n*2 for n in range(10)}
+print item 
+
 # to check the second largest item in a list, sorting a list without sort()
 def second_largest(test_list):
     first, second = None, None
