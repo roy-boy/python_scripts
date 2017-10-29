@@ -1,4 +1,4 @@
-# to check the 1st/second largest item in a list, sorting a list without sort()
+# to check the second largest item in a list, sorting a list without sort()
 def second_largest(test_list):
     first, second = None, None
     for n in test_list:
@@ -7,6 +7,15 @@ def second_largest(test_list):
             first, second = n, first
     # return first
     return second
+
+
+# to check the largest item in a list, sorting a list without sort()
+def find_biggest(a_list):
+    result = a_list[0]
+    for n in a_list:
+        if n > result:
+            result = n
+    print(result)
 
 
 def compare_dates(utc_date, local_date):
