@@ -2,9 +2,13 @@
 
 1.	Level description
 Level	Description
-Level 1	Beginner means someone who has just gone through an introductory Python course. He can solve some problems with 1 or 2 Python classes or functions. Normally, the answers could directly be found in the textbooks.
-Level 2	Intermediate means someone who has just learned Python, but already has a relatively strong programming background from before. He should be able to solve problems which may involve 3 or 3 Python classes or functions. The answers cannot be directly be found in the textbooks.
-Level 3	Advanced. He should use Python to solve more complex problem using more rich libraries functions and data structures and algorithms. He is supposed to solve the problem using several Python standard packages and advanced techniques.
+Level 1	Beginner means someone who has just gone through an introductory Python course. He can solve some problems with 1 or 2 
+Python classes or functions. Normally, the answers could directly be found in the textbooks.
+Level 2	Intermediate means someone who has just learned Python, but already has a relatively strong programming background from before.
+He should be able to solve problems which may involve 3 or 3 Python classes or functions. The answers cannot be directly be found in 
+the textbooks.
+Level 3	Advanced. He should use Python to solve more complex problem using more rich libraries functions and data structures and 
+algorithms. He is supposed to solve the problem using several Python standard packages and advanced techniques.
 
 2.	Problem template
 
@@ -66,7 +70,8 @@ Question 3
 Level 1
 
 Question:
-With a given integral number n, write a program to generate a dictionary that contains (i, i*i) such that is an integral number between 1 and n (both included). and then the program should print the dictionary.
+With a given integral number n, write a program to generate a dictionary that contains (i, i*i) such that is an integral number 
+between 1 and n (both included). and then the program should print the dictionary.
 Suppose the following input is supplied to the program:
 8
 Then, the output should be:
@@ -90,7 +95,8 @@ Question 4
 Level 1
 
 Question:
-Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains every number.
+Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains 
+every number.
 Suppose the following input is supplied to the program:
 34,67,55,33,12,98
 Then, the output should be:
@@ -155,7 +161,8 @@ The output of the program should be:
 18,22,24
 
 Hints:
-If the output received is in decimal form, it should be rounded off to its nearest value (for example, if the output received is 26.0, it should be printed as 26)
+If the output received is in decimal form, it should be rounded off to its nearest value (for example, if the output received is 26.0, 
+it should be printed as 26)
 In case of input data being supplied to the question, it should be assumed to be a console input. 
 
 Solution:
@@ -176,7 +183,8 @@ Question 7
 Level 2
 
 Question:
-Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
+Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and
+j-th column of the array should be i*j.
 Note: i=0,1.., X-1; j=0,1,¡­Y-1.
 Example
 Suppose the following inputs are given to the program:
@@ -206,7 +214,8 @@ Question 8
 Level 2
 
 Question:
-Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence 
+after sorting them alphabetically.
 Suppose the following input is supplied to the program:
 without,hello,bag,world
 Then, the output should be:
@@ -255,7 +264,8 @@ Question 10
 Level 2
 
 Question:
-Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate
+words and sorting them alphanumerically.
 Suppose the following input is supplied to the program:
 hello world and practice makes perfect and hello world again
 Then, the output should be:
@@ -276,7 +286,8 @@ Question 11
 Level 2
 
 Question:
-Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input and then check whether they 
+are divisible by 5 or not. The numbers that are divisible by 5 are to be printed in a comma separated sequence.
 Example:
 0100,0011,1010,1001
 Then the output should be:
@@ -302,7 +313,8 @@ Question 12
 Level 2
 
 Question:
-Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number.
+Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number 
+is an even number.
 The numbers obtained should be printed in a comma-separated sequence on a single line.
 
 Hints:
@@ -422,7 +434,8 @@ Question 17
 Level 2
 
 Question:
-Write a program that computes the net amount of a bank account based a transaction log from console input. The transaction log format is shown as following:
+Write a program that computes the net amount of a bank account based a transaction log from console input. The transaction log 
+format is shown as following:
 D 100
 W 200
 ¡­
@@ -462,7 +475,8 @@ Question 18
 Level 3
 
 Question:
-A website requires the users to input username and password to register. Write a program to check the validity of password input by users.
+A website requires the users to input username and password to register. Write a program to check the validity of password
+input by users.
 Following are the criteria for checking the password:
 1. At least 1 letter between [a-z]
 2. At least 1 number between [0-9]
@@ -470,7 +484,8 @@ Following are the criteria for checking the password:
 3. At least 1 character from [$#@]
 4. Minimum length of transaction password: 6
 5. Maximum length of transaction password: 12
-Your program should accept a sequence of comma separated passwords and will check them according to the above criteria. Passwords that match the criteria are to be printed, each separated by a comma.
+Your program should accept a sequence of comma separated passwords and will check them according to the above criteria. 
+Passwords that match the criteria are to be printed, each separated by a comma.
 Example
 If the following passwords are given as input to the program:
 ABd1234@1,a F1#,2w3E*,2We3345
@@ -510,7 +525,8 @@ Question 19
 Level 3
 
 Question:
-You are required to write a program to sort the (name, age, height) tuples by ascending order where name is string, age and height are numbers. The tuples are input by console. The sort criteria is:
+You are required to write a program to sort the (name, age, height) tuples by ascending order where name is string, 
+age and height are numbers. The tuples are input by console. The sort criteria is:
 1: Sort based on name;
 2: Then sort based on age;
 3: Then sort by score.
@@ -569,13 +585,15 @@ Question 21
 Level 3
 
 Question£º
-A robot moves in a plane starting from the original point (0,0). The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps. The trace of robot movement is shown as the following:
+A robot moves in a plane starting from the original point (0,0). The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps. 
+The trace of robot movement is shown as the following:
 UP 5
 DOWN 3
 LEFT 3
 RIGHT 2
 ¡­
-The numbers after the direction are steps. Please write a program to compute the distance from current position after a sequence of movement and original point. If the distance is a float, then just print the nearest integer.
+The numbers after the direction are steps. Please write a program to compute the distance from current position after a sequence 
+of movement and original point. If the distance is a float, then just print the nearest integer.
 Example:
 If the following tuples are given as input to the program:
 UP 5
@@ -672,7 +690,8 @@ Question 24
 Level 1
 
 Question:
-    Python has many built-in functions, and if you do not know how to use it, you can read document online or find some books. But Python has a built-in document function for every built-in functions.
+    Python has many built-in functions, and if you do not know how to use it, you can read document online or find some books. 
+	But Python has a built-in document function for every built-in functions.
     Please write a program to print some Python built-in functions documents, such as abs(), int(), raw_input()
     And add document for your own function
     
@@ -804,7 +823,8 @@ printValue("3","4") #34
 
 
 Question:
-Define a function that can accept two strings as input and print the string with maximum length in console. If two strings have the same length, then the function should print al l strings line by line.
+Define a function that can accept two strings as input and print the string with maximum length in console. 
+If two strings have the same length, then the function should print al l strings line by line.
 
 Hints:
 
@@ -831,7 +851,8 @@ printValue("one","three")
 2.10
 
 Question:
-Define a function that can accept an integer number as input and print the "It is an even number" if the number is even, otherwise print "It is an odd number".
+Define a function that can accept an integer number as input and print the "It is an even number" if the number is even, 
+otherwise print "It is an odd number".
 
 Hints:
 
@@ -852,7 +873,8 @@ checkValue(7)
 2.10
 
 Question:
-Define a function which can print a dictionary where the keys are numbers between 1 and 3 (both included) and the values are square of keys.
+Define a function which can print a dictionary where the keys are numbers between 1 and 3 (both included) and the values are 
+square of keys.
 
 Hints:
 
@@ -870,15 +892,12 @@ def printDict():
 
 printDict()
 
-
-
-
-
 #----------------------------------------#
 2.10
 
 Question:
-Define a function which can print a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys.
+Define a function which can print a dictionary where the keys are numbers between 1 and 20 (both included) and the values 
+are square of keys.
 
 Hints:
 
@@ -901,7 +920,8 @@ printDict()
 2.10
 
 Question:
-Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys. The function should just print the values only.
+Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values 
+are square of keys. The function should just print the values only.
 
 Hints:
 
@@ -925,7 +945,8 @@ printDict()
 2.10
 
 Question:
-Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values are square of keys. The function should just print the keys only.
+Define a function which can generate a dictionary where the keys are numbers between 1 and 20 (both included) and the values
+are square of keys. The function should just print the keys only.
 
 Hints:
 
@@ -972,7 +993,8 @@ printList()
 2.10
 
 Question:
-Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print the first 5 elements in the list.
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). 
+Then the function needs to print the first 5 elements in the list.
 
 Hints:
 
@@ -996,7 +1018,8 @@ printList()
 2.10
 
 Question:
-Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print the last 5 elements in the list.
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). 
+Then the function needs to print the last 5 elements in the list.
 
 Hints:
 
@@ -1020,7 +1043,8 @@ printList()
 2.10
 
 Question:
-Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print all values except the first 5 elements in the list.
+Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). 
+Then the function needs to print all values except the first 5 elements in the list.
 
 Hints:
 
@@ -1068,7 +1092,8 @@ printTuple()
 2.10
 
 Question:
-With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first half values in one line and the last half values in one line. 
+With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first half values in one line and the last half 
+values in one line. 
 
 Hints:
 
@@ -1294,7 +1319,8 @@ print aCircle.area()
 
 7.2
 
-Define a class named Rectangle which can be constructed by a length and width. The Rectangle class has a method which can compute the area. 
+Define a class named Rectangle which can be constructed by a length and width. The Rectangle class has a method which 
+can compute the area. 
 
 Hints:
 
@@ -1320,7 +1346,8 @@ print aRectangle.area()
 
 7.2
 
-Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
+Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. 
+Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
 
 Hints:
 
@@ -1345,10 +1372,6 @@ class Square(Shape):
 
 aSquare= Square(3)
 print aSquare.area()
-
-
-
-
 
 
 
@@ -1414,7 +1437,8 @@ error = MyError("something wrong")
 #----------------------------------------#
 Question:
 
-Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the user name of a given email address. Both user names and company names are composed of letters only.
+Assuming that we have some email addresses in the "username@companyname.com" format, 
+please write program to print the user name of a given email address. Both user names and company names are composed of letters only.
 
 Example:
 If the following email address is given as input to the program:
@@ -1442,7 +1466,8 @@ print r2.group(1)
 #----------------------------------------#
 Question:
 
-Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the company name of a given email address. Both user names and company names are composed of letters only.
+Assuming that we have some email addresses in the "username@companyname.com" format, please write program to 
+print the company name of a given email address. Both user names and company names are composed of letters only.
 
 Example:
 If the following email address is given as input to the program:
@@ -1649,7 +1674,8 @@ f(n)=0 if n=0
 f(n)=1 if n=1
 f(n)=f(n-1)+f(n-2) if n>1
 
-Please write a program using list comprehension to print the Fibonacci Sequence in comma separated form with a given n input by console.
+Please write a program using list comprehension to print the Fibonacci Sequence in comma separated form with a 
+given n input by console.
 
 Example:
 If the following n is given as input to the program:
@@ -1722,7 +1748,8 @@ print ",".join(values)
 
 Question:
 
-Please write a program using generator to print the numbers which can be divisible by 5 and 7 between 0 and n in comma separated form while n is input by console.
+Please write a program using generator to print the numbers which can be divisible by 5 and 7 between 0 and n in comma 
+separated form while n is input by console.
 
 Example:
 If the following n is given as input to the program:
@@ -1800,7 +1827,8 @@ print eval(expression)
 #----------------------------------------#
 Question:
 
-Please write a binary search function which searches an item in a sorted list. The function should return the index of element to be searched in the list.
+Please write a binary search function which searches an item in a sorted list. The function should return the index of 
+element to be searched in the list.
 
 
 Hints:
@@ -1835,7 +1863,8 @@ print bin_search(li,12)
 #----------------------------------------#
 Question:
 
-Please write a binary search function which searches an item in a sorted list. The function should return the index of element to be searched in the list.
+Please write a binary search function which searches an item in a sorted list. The function should return the index of
+element to be searched in the list.
 
 
 Hints:
@@ -1920,9 +1949,8 @@ print random.choice([i for i in range(11) if i%2==0])
 #----------------------------------------#
 Question:
 
-Please write a program to output a random number, which is divisible by 5 and 7, between 0 and 10 inclusive using random module and list comprehension.
-
-
+Please write a program to output a random number, which is divisible by 5 and 7, between 0 and 10 inclusive using random 
+module and list comprehension.
 
 Hints:
 Use random.choice() to a random element from a list.
@@ -2077,7 +2105,8 @@ print li
 #----------------------------------------#
 Question:
 
-Please write a program to generate all sentences where subject is in ["I", "You"] and verb is in ["Play", "Love"] and the object is in ["Hockey","Football"].
+Please write a program to generate all sentences where subject is in ["I", "You"] and verb is in ["Play", "Love"] 
+and the object is in ["Hockey","Football"].
 
 Hints:
 Use list[index] notation to get a element from a list.
@@ -2109,7 +2138,8 @@ print li
 #----------------------------------------#
 Question:
 
-By using list comprehension, please write a program to print the list after removing delete numbers which are divisible by 5 and 7 in [12,24,35,70,88,120,155].
+By using list comprehension, please write a program to print the list after removing delete numbers which are divisible by 5 
+and 7 in [12,24,35,70,88,120,155].
 
 Hints:
 Use list comprehension to delete a bunch of element from a list.
@@ -2124,7 +2154,8 @@ print li
 #----------------------------------------#
 Question:
 
-By using list comprehension, please write a program to print the list after removing the 0th, 2nd, 4th,6th numbers in [12,24,35,70,88,120,155].
+By using list comprehension, please write a program to print the list after removing the 0th, 2nd, 4th,6th numbers 
+in [12,24,35,70,88,120,155].
 
 Hints:
 Use list comprehension to delete a bunch of element from a list.
@@ -2153,7 +2184,8 @@ print array
 #----------------------------------------#
 Question:
 
-By using list comprehension, please write a program to print the list after removing the 0th,4th,5th numbers in [12,24,35,70,88,120,155].
+By using list comprehension, please write a program to print the list after removing the 0th,4th,5th numbers 
+in [12,24,35,70,88,120,155].
 
 Hints:
 Use list comprehension to delete a bunch of element from a list.
@@ -2186,7 +2218,8 @@ print li
 #----------------------------------------#
 Question:
 
-With two given lists [1,3,6,78,35,55] and [12,24,35,24,88,120,155], write a program to make a list whose elements are intersection of the above given lists.
+With two given lists [1,3,6,78,35,55] and [12,24,35,24,88,120,155], write a program to make a list 
+whose elements are intersection of the above given lists.
 
 Hints:
 Use set() and "&=" to do set intersection operation.
@@ -2201,7 +2234,8 @@ print li
 
 #----------------------------------------#
 
-With a given list [12,24,35,24,88,120,155,88,120,155], write a program to print this list after removing all duplicate values with original order reserved.
+With a given list [12,24,35,24,88,120,155,88,120,155], write a program to print this list after removing all 
+duplicate values with original order reserved.
 
 Hints:
 Use set() to store a number of values without duplicate.
@@ -2225,7 +2259,8 @@ print removeDuplicate(li)
 #----------------------------------------#
 Question:
 
-Define a class Person and its two child classes: Male and Female. All classes have a method "getGender" which can print "Male" for Male class and "Female" for Female class.
+Define a class Person and its two child classes: Male and Female. All classes have a method "getGender" which can 
+print "Male" for Male class and "Female" for Female class.
 
 Hints:
 Use Subclass(Parentclass) to define a child class.
