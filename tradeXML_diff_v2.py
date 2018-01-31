@@ -5,6 +5,7 @@ import logging
 from testProperty import NAME_SPACE, TEST_OUTPUT_PATH, RT_NAME_SPACE
 
 
+
 class XMLTree:
     """This module takes two xml tree and does structure and text comparision for each node unless it's ignored."""
 
@@ -107,11 +108,14 @@ class XMLTree:
     @staticmethod
     def text_compare(node_text_a, node_text_b):
         """ Compare two text strings """
+        if str(node_text_a).count('-') == 2:
+            return True
         if not node_text_a and not node_text_b:
             return True
         if node_text_a == '*' or node_text_b == '*':
             return True
         return (node_text_a or '').strip() == (node_text_b or '').strip()
+
 
 # scripts to call and run the xml diff---------------------------------------------------------
 # baseline_xml = '../test_input_data/fpml/a.xml'
