@@ -8,7 +8,7 @@ from test_config import TEST_OUTPUT_PATH, TEST_INPUT_DATA, TEST_RESULT_CSV
 # load csv file into a list
 
 def load_csv(input_csv_file):
-    tl.test_logger.info('AXLE Integration Test started...')
+    tl.test_logger.info('Integration Test started...')
     try:
         with open(input_csv_file) as input_data:
             test_suite = csv.DictReader(input_data)
