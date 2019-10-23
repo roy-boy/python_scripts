@@ -1,0 +1,22 @@
+WEB:
+
+https://medium.com/@bmshamsnahid/automated-testing-with-selenium-webdriver-and-node-js-f99f64720352
+
+https://github.com/cucumber/cucumber-js
+
+
+
+API:
+
+https://medium.com/prismapp/10-steps-how-to-automate-your-api-testing-effectively-af866fba942f
+
+https://blog.risingstack.com/10-best-practices-for-writing-node-js-rest-apis/
+
+https://adityasridhar.com/posts/how-to-use-nodejs-without-frameworks-and-external-libraries
+
+https://www.casaaco.com/w3pu9lt/9hr.php?mm=node-js-call-api 
+
+https://www.codementor.io/olatundegaruba/integration-testing-supertest-mocha-chai-6zbh6sefz
+
+JAVA rest API
+https://www.baeldung.com/integration-testing-a-rest-api
