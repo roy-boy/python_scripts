@@ -20,3 +20,30 @@ https://www.codementor.io/olatundegaruba/integration-testing-supertest-mocha-cha
 
 JAVA rest API
 https://www.baeldung.com/integration-testing-a-rest-api
+
+
+parameters = [
+    # 1 negative test - no s3:GetObject permission will get an HTTP code 403 ("access denied") error.
+    # 1 negative - no s3:ListBucket permission, Amazon S3 returns an HTTP code 403 ("access denied") error.
+    # to add 1 negative test for no Bucket provided
+    # to add 1 negative test for if_match == N, return a 412 (precondition failed)
+    ["If_Match=Y"],
+    ["If_Modified_since=Y", "If_Modified_since=N"],
+    ["If_Non-Match=Y", "If_Non-Match=N"],
+    # to add 1 negative test for If_Un_Modified == N, return a 412 (precondition failed)
+    ["If_Un_Modified=Y"],
+    # add 1 negative test for key length < 1 ( key is not provided)
+    # add 1 negative test for key not exist in the bucket 404 ("no such key") error.
+    ["Key= abc"],
+    # add 2 negative tests for part_number == 0, and part_number == 10001
+    ["part_number=1", "part_number=10000"],
+    ["Range= set", "Range= NA"],
+    ["Version_id= 001", "Version_id= NA"],
+    ["x-amz-requester-payer=requester", "x-amz-requester-payer=invalid"]
+    # add 1 full set test for Glacier object to verify the response elements
+    # add 1 full set test and 1 negative test(invalid algo) for x-amz-server-side-encryption-customer-algorithm
+    # add 1 full set test and 1 negative test(invalid key)for x-amz-server-side-encryption-customer-key
+    # add 1 full set test and 1 negative test(invalid key) for x-amz-server-side-encryption-customer-key-MD5
+    # add 1 negative test for header size > 8kb
+    # NOTE: More test cases can be added by preparing more test data( S3 objects) for asserting all response elements,
+]
