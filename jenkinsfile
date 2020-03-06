@@ -1,0 +1,13 @@
+def email_recipients = ""
+def email_subject = ""
+def email_message = ""
+
+failure {
+                    checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github-key', url: 'https://github.service.com/roy/python_scripts.git']]]
+                    // NOTE the credentials may change depend on the Jenkins server setup, need to check against the Jenkins setup!!!!!!
+                    catchError{ withCredentials([usernamePassword(credentialsId: 'email_notifications', passwordVariable: 'email_password', usernameVariable: 'email_username')]) {
+                                                                  sh "python common/src/main/resources/email_utility.py 'STMP_Server' 25 'WDCD_PLATFORM_DO_NOT_REPLY@roy.com' '${email_recipients}' '${email_subject}${currentBuild.currentResult}' '${email_message}' '${EMAIL_PASSWORD}' '${EMAIL_USERNAME}'"
+                                                        }
+                               }
+                    archiveArtifacts 'target/screenshots/*.*'
+                }
